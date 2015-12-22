@@ -87,3 +87,4 @@ def sondage(question, mot_arret):
 
 res = sondage("preferee?","assez")
 print(res)
+
