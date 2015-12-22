@@ -66,5 +66,47 @@ for l in dicton:
             dictionair[lettre] += 1
         else:
             dictionair[lettre] = 1
-
 print(dictionair)
+
+#fichiers (iterable:lignes)
+chemin = r"C:\Users\bruce\Documents\Visual Studio 2015\Projects\PythonApplication1\PythonApplication1\python.txt"
+
+fic = open(chemin)
+#(ligne1, ligne2, ligness*) = fic
+print(fic)
+fic.close()
+"""
+f = open(chemin)
+txt = f.read(10)
+f.seek(0)
+with open(chemin) as fichier:
+    for ligne in fichier:
+        print(ligne, end="")
+"""
+# w supprime à l'ouverture, sinon utiliser a (append)
+with open(chemin,"w") as f:
+    f.write("yo\n")
+    f.write("yot\n")
+dict = {}
+taille = 0
+with open(chemin) as f:
+    for ligne in f:
+        taille += len(ligne)
+        for lettre in ligne:
+            if lettre in dict:
+                dict[lettre] += 1
+            else:
+                dict[lettre] = 1
+print(dict)
+print(taille)   
+
+#encoding mettre de l'utf-8 partout!
+#ko "é".encode()
+print(open(chemin,encoding="utf-8").read())
+print(open(chemin,encoding="iso8859-1").read())
+contenu = open(chemin,"rb").read()
+print(contenu)
+#print(b'Allo ete'.encode('utf8'))
+contenu.decode('ascii', errors='ignore')
+print(contenu)
+
