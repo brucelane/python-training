@@ -33,3 +33,38 @@ nombres = list(range(10))
 carres = [ nb * nb for nb in nombres if nb % 2 == 0] #liste en intension / comprehensive list
 print(carres)
 
+#valeur par défaut de b: 1)
+def multiplier(a, b=1):
+    res = a * b
+    return res
+print(multiplier(2) )
+
+import datetime
+def date(pattern = "%d/%m/%y"):
+    d = datetime.datetime.now()
+#    return d
+    return ":" + pattern + "".format(d)
+
+#print(date("%d"))
+ll = list(enumerate("yo dude"))
+print(ll)
+#dictionnaire: hashmap en C ou java
+#pas sliceable, il est mutable, indexable, iterable
+# cle : valeur donccle unique
+fruits = {"pomme":"rouge","banane":"jaune"}
+print( fruits["banane"])
+fruits["poire"] ="jaune"
+print( fruits["poire"])
+#idz = input(idz)
+
+dicton = "plus un arbre est grand, plus il y a d'oiseaux pour chier dessus"
+dictionair = {}
+for l in dicton:
+    lettre = l.strip()
+    if lettre:
+        if lettre in dictionair:
+            dictionair[lettre] += 1
+        else:
+            dictionair[lettre] = 1
+
+print(dictionair)
