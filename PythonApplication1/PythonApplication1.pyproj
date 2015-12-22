@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>9a0288da-3510-4088-8d6e-a933ba7790a0</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>jour1.py</StartupFile>
+    <StartupFile>jour2.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +23,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="jour1.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="jour2.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="PythonApplication1.py" />
