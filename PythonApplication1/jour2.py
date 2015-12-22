@@ -69,8 +69,8 @@ for l in dicton:
 print(dictionair)
 
 #fichiers (iterable:lignes)
-chemin = r"C:\Users\bruce\Documents\Visual Studio 2015\Projects\PythonApplication1\PythonApplication1\python.txt"
-
+#chemin = r"C:\Users\bruce\Documents\Visual Studio 2015\Projects\PythonApplication1\PythonApplication1\python.txt"
+chemin = "/home/bruce/python-training/PythonApplication1/python.txt"
 fic = open(chemin)
 #(ligne1, ligne2, ligness*) = fic
 print(fic)
