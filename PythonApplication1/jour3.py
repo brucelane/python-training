@@ -103,3 +103,59 @@ class Moto(Vehicule):
 suzuki = Moto("noir")
 suzuki.coin()
 
+# generateurs (lisible une seule fois à chaque next)
+nombres = [0,1,2,4]
+
+carres = ( x*x for x in nombres if x % 2 == 0)
+print(next(carres))
+print(next(carres))
+
+def toto():#pas une fct
+    print('toto')
+    yield 1 #exec puis attend next
+    yield 2
+    yield 3
+
+gen = toto()
+print(gen)
+next(gen)
+for x in gen:
+    print(x)
+
+def titi(nombres):
+    for x in nombres:
+        if x % 2 == 0:
+            yield x * x
+
+g = titi(nombres)
+for x in g:
+    print(x)
+
+import os
+
+def get_mot(dossier, lettre):
+    for racine,dossiers, fichiers in os.walk(dossier):
+        for fichier in fichiers:
+            if os.path.join(dossier,fichier):
+                print(os.path.join(dossier,fichier))
+                fic = os.path.join(dossier,fichier)
+                try:
+                    with open(fic) as f:
+                        for ligne in f:
+                            for mot in ligne.split:
+                                if lettre in mot:
+                                    print(fichier)
+                                    yield mot
+                except OSError:
+                    print("err")
+                    pass
+
+
+gn = get_mot('/tmp','e')
+next(gn)
+next(gn)
+
+import  itertools
+#itertools
+#for mot in gn:
+#    print(mot)
