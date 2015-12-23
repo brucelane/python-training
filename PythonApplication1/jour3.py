@@ -37,4 +37,6 @@ for personne, bieres in scores.items():
     	max = scores[personne]
     	sborratch = personne
 
-print(Fore.RED + "Et le plus sborratch est %s" % sborratch)
+print(Style.BRIGHT + Fore.GREEN + "Et le plus sborratch est " )
+print(Fore.RED + " %s" % sborratch)
+print("...")
